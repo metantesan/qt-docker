@@ -48,8 +48,7 @@ jobs:
     - name: Build packages (${{ matrix.platform }})
       uses: docker/build-push-action@v6
       with:
-        registry: ${{ env.REGISTRY }}
         platforms: ${{matrix.platform}}
         context: ./alpine
         push: ${{ github.event_name != 'pull_request' }}
-        tags: ${{ env.IMAGE_NAME}}
+        tags: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}"
