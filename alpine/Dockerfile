@@ -1,4 +1,4 @@
-FROM aarch64/alpine
+FROM arm64v8/alpine
 
 RUN apk add --no-cache \
 		qt5-qtbase-dev \
