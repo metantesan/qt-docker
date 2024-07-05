@@ -27,7 +27,10 @@ RUN apk add --no-cache \
 		qt5-qtgraphicaleffects \
 		g++ \
 		make \
-		bash 
+		bash \
+		cmake \
+		ninja \
+		alpine-sdk
 
 ENV PATH=/usr/lib/qt5/bin:$PATH
 
